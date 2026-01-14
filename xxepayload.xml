@@ -1,15 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>Exemple de flux RSS</title>
-    <description>Flux RSS minimal valide</description>
-
-    <item>
-      <title>Premier article</title>
-      <link>https://monsite.test/article-1</link>
-      <description>Contenu du premier article</description>
-      <pubDate>Mon, 15 Jan 2026 10:00:00 GMT</pubDate>
-    </item>
-
-  </channel>
-</rss>
+<!--?xml version="1.0" ?-->
+<!DOCTYPE replace [<!ENTITY example "Doe"> ]>
+ <userInfo>
+  <firstName>John</firstName>
+  <lastName>&example;</lastName>
+ </userInfo>
