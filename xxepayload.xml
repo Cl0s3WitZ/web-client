@@ -5,16 +5,9 @@
 <rss version="2.0">
   <channel>
     <title>Flux RSS dynamique</title>
-    <link>https://example.com</link>
     <description>Flux RSS avec contenu externe</description>
-
     <item>
-      <title>Article dynamique</title>
-      <link>https://example.com/article-1</link>
-      <description>
-        &article;
-      </description>
+      <title>&article;</title>
     </item>
-
   </channel>
 </rss>
