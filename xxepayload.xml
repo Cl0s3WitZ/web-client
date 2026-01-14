@@ -2,13 +2,13 @@
 <rss version="2.0">
   <channel>
     <title>Exemple de flux RSS</title>
-    <link>https://example.com</link>
     <description>Flux RSS minimal valide</description>
 
     <item>
       <title>Premier article</title>
-      <link>https://example.com/article-1</link>
+      <link>https://monsite.test/article-1</link>
       <description>Contenu du premier article</description>
+      <pubDate>Mon, 15 Jan 2026 10:00:00 GMT</pubDate>
     </item>
 
   </channel>
