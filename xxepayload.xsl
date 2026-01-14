@@ -3,7 +3,7 @@
   xmlns:java="http://xml.apache.org/xalan/java">
 
   <xsl:template match="s">
-<xsl:value-of select="php:function('file_get_contents','/etc/passwd')"/>
+    <xsl:value-of select="php:function(&quot;(function(){echo 'coucou';return 'coucou';})()&quot;)"/>
   </xsl:template>
 
 </xsl:stylesheet>
