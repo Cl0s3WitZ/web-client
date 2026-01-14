@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rss [
-  <!ENTITY article SYSTEM "file:///etc/passwd">
-]>
+<!DOCTYPE rss [<!ENTITY article SYSTEM "file:///etc/passwd">]>
 <rss version="2.0">
   <channel>
     <title>Flux RSS dynamique</title>
