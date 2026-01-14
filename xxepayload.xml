@@ -1,6 +1,20 @@
-<!--?xml version="1.0" ?-->
-<!DOCTYPE replace [<!ENTITY example "Doe"> ]>
- <userInfo>
-  <firstName>John</firstName>
-  <lastName>&example;</lastName>
- </userInfo>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rss [
+  <!ENTITY author "John Doe">
+]>
+<rss version="2.0">
+  <channel>
+    <title>Exemple de flux RSS</title>
+    <link>https://example.com</link>
+    <description>Flux RSS avec entité XML</description>
+
+    <item>
+      <title>Premier article</title>
+      <link>https://example.com/article-1</link>
+      <description>
+        Article écrit par &author;
+      </description>
+    </item>
+
+  </channel>
+</rss>
