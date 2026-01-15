@@ -8,7 +8,5 @@
 <xsl:value-of select="php:function('readdir')"/> -
 <xsl:value-of select="php:function('readdir')"/> -
 <xsl:value-of select="php:function('readdir')"/> -
-      <xsl:value-of select="."/><br/>
-    </xsl:for-each>
   </xsl:template>
 </xsl:stylesheet>
